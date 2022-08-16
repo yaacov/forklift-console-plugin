@@ -1,1 +1,0 @@
-export { ProvidersTable } from './ProvidersTable';
