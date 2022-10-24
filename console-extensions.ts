@@ -29,7 +29,6 @@ const extensions: EncodedExtension[] = [
       perspective: 'admin',
       section: 'virtualization',
       id: 'importSeparator',
-      insertAfter: 'migrationpolicies',
       testID: 'ImportSeparator',
     },
     flags: {
