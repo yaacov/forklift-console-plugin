@@ -13,16 +13,16 @@ spec:
     basePath: '/'
   proxy:
     - type: Service
-      alias: forklift-inventory
-      authorize: true
-      service:
-        name: forklift-inventory
-        namespace: {{ .Values.forkliftNamespace }}
-        port: 8443
-    - type: Service
       alias: forklift-must-gather-api
       authorize: true
       service:
         name: forklift-must-gather-api
+        namespace: {{ .Values.forkliftNamespace }}
+        port: 8443
+    - type: Service
+      alias: forklift-inventory
+      authorize: true
+      service:
+        name: forklift-inventory
         namespace: {{ .Values.forkliftNamespace }}
         port: 8443
