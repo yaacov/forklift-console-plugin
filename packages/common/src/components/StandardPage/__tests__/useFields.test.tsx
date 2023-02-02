@@ -1,4 +1,4 @@
-import { NAME, NAMESPACE } from '@kubev2v/common/utils/constants';
+import { NAME, NAMESPACE } from 'src/utils/constants';
 import { act, cleanup, renderHook } from '@testing-library/react-hooks';
 
 import { useFields } from '../useFields';

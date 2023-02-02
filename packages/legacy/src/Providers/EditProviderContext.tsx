@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import type { IPlan, IProviderObject } from '@kubev2v/legacy/queries/types';
+import type { IPlan, IProviderObject } from 'src/queries/types';
 
 /**
  * @deprecated

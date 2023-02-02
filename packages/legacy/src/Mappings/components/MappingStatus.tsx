@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { StatusIcon } from '@migtools/lib-ui';
-import { QuerySpinnerMode, ResolvedQueries } from '@kubev2v/legacy/common/components/ResolvedQuery';
-import { useResourceQueriesForMapping } from '@kubev2v/legacy/queries';
-import { MappingType, Mapping } from '@kubev2v/legacy/queries/types';
+import { QuerySpinnerMode, ResolvedQueries } from 'src/common/components/ResolvedQuery';
+import { useResourceQueriesForMapping } from 'src/queries';
+import { MappingType, Mapping } from 'src/queries/types';
 
 import './MappingStatus.css';
 import { isMappingValid } from './helpers';

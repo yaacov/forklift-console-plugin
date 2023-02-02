@@ -4,15 +4,15 @@ import {
   checkIfResourceExists,
   createResource,
   ForkliftResourceKind,
-} from '@kubev2v/legacy/client/helpers';
+} from 'src/client/helpers';
 import {
   IKubeList,
   IKubeResponse,
   IKubeStatus,
   KubeClientError,
-} from '@kubev2v/legacy/client/types';
-import { dnsLabelNameSchema } from '@kubev2v/legacy/common/constants';
-import { usePollingContext } from '@kubev2v/legacy/common/context';
+} from 'src/client/types';
+import { dnsLabelNameSchema } from 'src/common/constants';
+import { usePollingContext } from 'src/common/context';
 import { UseMutationResult, UseQueryResult, useQueryClient } from 'react-query';
 import {
   mockKubeList,
@@ -29,13 +29,13 @@ import { getMappingResource } from './mappings';
 import {
   PlanWizardFormState,
   PlanWizardMode,
-} from '@kubev2v/legacy/Plans/components/Wizard/PlanWizard';
+} from 'src/Plans/components/Wizard/PlanWizard';
 import {
   generateHook,
   generateMappings,
   generatePlan,
-} from '@kubev2v/legacy/Plans/components/Wizard/helpers';
-import { IMetaObjectMeta } from '@kubev2v/legacy/queries/types/common.types';
+} from 'src/Plans/components/Wizard/helpers';
+import { IMetaObjectMeta } from 'src/queries/types/common.types';
 import { consoleFetchJSON } from '@openshift-console/dynamic-plugin-sdk';
 
 export const usePlansQuery = (namespace: string): UseQueryResult<IKubeList<IPlan>> => {

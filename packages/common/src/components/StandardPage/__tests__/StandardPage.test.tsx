@@ -1,7 +1,7 @@
 import * as React from 'react';
 
-import { RowProps } from '@kubev2v/common/components/TableView';
-import { NAME, NAMESPACE } from '@kubev2v/common/utils/constants';
+import { RowProps } from 'src/components/TableView';
+import { NAME, NAMESPACE } from 'src/utils/constants';
 import { Td, Tr } from '@patternfly/react-table';
 import { cleanup, render } from '@testing-library/react';
 

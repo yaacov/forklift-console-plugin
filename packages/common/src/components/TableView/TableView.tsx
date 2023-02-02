@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react';
 
-import { UID } from '@kubev2v/common/utils/constants';
-import { useTranslation } from '@kubev2v/common/utils/i18n';
+import { UID } from 'src/utils/constants';
+import { useTranslation } from 'src/utils/i18n';
 import { Bullseye } from '@patternfly/react-core';
 import { TableComposable, Tbody, Td, Th, Thead, Tr } from '@patternfly/react-table';
 

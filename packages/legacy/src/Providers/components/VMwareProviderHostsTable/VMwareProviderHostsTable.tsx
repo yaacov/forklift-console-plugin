@@ -10,17 +10,17 @@ import {
   cellWidth,
   truncate,
 } from '@patternfly/react-table';
-import { usePaginationState, useSortState } from '@kubev2v/legacy/common/hooks';
+import { usePaginationState, useSortState } from 'src/common/hooks';
 import { StatusIcon, useSelectionState } from '@migtools/lib-ui';
-import { IHost, IVMwareProvider } from '@kubev2v/legacy/queries/types';
+import { IHost, IVMwareProvider } from 'src/queries/types';
 import { SelectNetworkModal } from './SelectNetworkModal';
-import { useHostConfigsQuery } from '@kubev2v/legacy/queries';
+import { useHostConfigsQuery } from 'src/queries';
 import { findHostConfig, findSelectedNetworkAdapter, formatHostNetworkAdapter } from './helpers';
-import { ResolvedQuery } from '@kubev2v/legacy/common/components/ResolvedQuery';
-import { StatusCondition } from '@kubev2v/legacy/common/components/StatusCondition';
+import { ResolvedQuery } from 'src/common/components/ResolvedQuery';
+import { StatusCondition } from 'src/common/components/StatusCondition';
 import '@kubev2v/legacy/Providers/components/VMwareProviderHostsTable/VMwareProviderHostsTable.css';
 import spacing from '@patternfly/react-styles/css/utilities/Spacing/spacing';
-import { ENV } from '@kubev2v/legacy/common/constants';
+import { ENV } from 'src/common/constants';
 
 interface IVMwareProviderHostsTableProps {
   provider: IVMwareProvider;

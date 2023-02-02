@@ -7,16 +7,16 @@ import KubeClient, {
   ClusterResource,
   CoreClusterResource,
 } from '@migtools/lib-ui';
-import { ProviderType, CLUSTER_API_VERSION } from '@kubev2v/legacy/common/constants';
-import { IProviderObject, ISecret } from '@kubev2v/legacy/queries/types';
+import { ProviderType, CLUSTER_API_VERSION } from 'src/common/constants';
+import { IProviderObject, ISecret } from 'src/queries/types';
 import {
   AddProviderFormValues,
   OpenshiftProviderFormValues,
   RHVProviderFormValues,
   VMwareProviderFormValues,
-} from '@kubev2v/legacy/Providers/components/AddEditProviderModal/AddEditProviderModal';
+} from 'src/Providers/components/AddEditProviderModal/AddEditProviderModal';
 import { AuthorizedClusterClient } from './types';
-import { nameAndNamespace } from '@kubev2v/legacy/queries/helpers';
+import { nameAndNamespace } from 'src/queries/helpers';
 
 class ForkliftResource extends NamespacedResource {
   private _gvk: KubeClient.IGroupVersionKindPlural;

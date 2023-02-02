@@ -1,11 +1,11 @@
-import { ProviderType } from '@kubev2v/legacy/common/constants';
+import { ProviderType } from 'src/common/constants';
 import {
   ICR,
   IMetaObjectMeta,
   INameNamespaceRef,
   IStatusCondition,
   IObjectReference,
-} from '@kubev2v/legacy/queries/types';
+} from 'src/queries/types';
 
 interface IProviderMetadata extends IMetaObjectMeta {
   annotations?: {

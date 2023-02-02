@@ -17,7 +17,7 @@ import {
 } from '@patternfly/react-core';
 import spacing from '@patternfly/react-styles/css/utilities/Spacing/spacing';
 import { ValidatedTextInput } from '@migtools/lib-ui';
-import { OptionWithValue } from '@kubev2v/legacy/common/components/SimpleSelect';
+import { OptionWithValue } from 'src/common/components/SimpleSelect';
 import {
   MappingType,
   Mapping,
@@ -27,31 +27,31 @@ import {
   SourceVM,
   SourceInventoryProvider,
   POD_NETWORK,
-} from '@kubev2v/legacy/queries/types';
+} from 'src/queries/types';
 import {
   MappingBuilder,
   IMappingBuilderItem,
-} from '@kubev2v/legacy/Mappings/components/MappingBuilder';
+} from 'src/Mappings/components/MappingBuilder';
 import {
   filterSharedMappings,
   useMappingResourceQueries,
   useMappingsQuery,
   useDisksQuery,
   useNicProfilesQuery,
-} from '@kubev2v/legacy/queries';
+} from 'src/queries';
 import { PlanWizardFormState } from './PlanWizard';
 import {
   getBuilderItemsFromMapping,
   getBuilderItemsWithMissingSources,
-} from '@kubev2v/legacy/Mappings/components/MappingBuilder/helpers';
-import { isSameResource } from '@kubev2v/legacy/queries/helpers';
+} from 'src/Mappings/components/MappingBuilder/helpers';
+import { isSameResource } from 'src/queries/helpers';
 
 import './MappingForm.css';
-import { ResolvedQueries } from '@kubev2v/legacy/common/components/ResolvedQuery';
-import { isMappingValid } from '@kubev2v/legacy/Mappings/components/helpers';
-import { ConditionalTooltip } from '@kubev2v/legacy/common/components/ConditionalTooltip';
-import { usePausedPollingEffect } from '@kubev2v/legacy/common/context';
-import { ProviderType } from '@kubev2v/legacy/common/constants';
+import { ResolvedQueries } from 'src/common/components/ResolvedQuery';
+import { isMappingValid } from 'src/Mappings/components/helpers';
+import { ConditionalTooltip } from 'src/common/components/ConditionalTooltip';
+import { usePausedPollingEffect } from 'src/common/context';
+import { ProviderType } from 'src/common/constants';
 
 interface IMappingFormProps {
   form: PlanWizardFormState['storageMapping'] | PlanWizardFormState['networkMapping'];

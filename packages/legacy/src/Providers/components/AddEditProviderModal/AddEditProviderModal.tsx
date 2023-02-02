@@ -30,7 +30,7 @@ import {
   ValidatedPasswordInput,
 } from '@migtools/lib-ui';
 
-import { SimpleSelect, OptionWithValue } from '@kubev2v/legacy/common/components/SimpleSelect';
+import { SimpleSelect, OptionWithValue } from 'src/common/components/SimpleSelect';
 import {
   ENV,
   fingerprintSchema,
@@ -40,21 +40,21 @@ import {
   PROVIDER_TYPE_NAMES,
   urlSchema,
   usernameSchema,
-} from '@kubev2v/legacy/common/constants';
-import { usePausedPollingEffect } from '@kubev2v/legacy/common/context';
+} from 'src/common/constants';
+import { usePausedPollingEffect } from 'src/common/context';
 import {
   getProviderNameSchema,
   useCreateProviderMutation,
   usePatchProviderMutation,
   useClusterProvidersQuery,
   useCertificateQuery,
-} from '@kubev2v/legacy/queries';
+} from 'src/queries';
 
 import HelpIcon from '@patternfly/react-icons/dist/esm/icons/help-icon';
-import { IProviderObject } from '@kubev2v/legacy/queries/types';
-import { QuerySpinnerMode, ResolvedQuery } from '@kubev2v/legacy/common/components/ResolvedQuery';
+import { IProviderObject } from 'src/queries/types';
+import { QuerySpinnerMode, ResolvedQuery } from 'src/common/components/ResolvedQuery';
 import { useAddEditProviderPrefillEffect } from './helpers';
-import { LoadingEmptyState } from '@kubev2v/legacy/common/components/LoadingEmptyState';
+import { LoadingEmptyState } from 'src/common/components/LoadingEmptyState';
 
 interface IAddEditProviderModalProps {
   onClose: (navToProviderType?: ProviderType | null) => void;

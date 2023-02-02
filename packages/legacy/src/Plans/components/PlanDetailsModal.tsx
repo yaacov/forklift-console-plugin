@@ -6,19 +6,19 @@ import {
   IPlan,
   MappingType,
   SourceInventoryProvider,
-} from '@kubev2v/legacy/queries/types';
+} from 'src/queries/types';
 import {
   useInventoryProvidersQuery,
   useMappingsQuery,
   useResourceQueriesForMapping,
   useHooksQuery,
   useSourceVMsQuery,
-} from '@kubev2v/legacy/queries';
-import { usePausedPollingEffect } from '@kubev2v/legacy/common/context';
-import { ResolvedQueries } from '@kubev2v/legacy/common/components/ResolvedQuery';
-import { isSameResource } from '@kubev2v/legacy/queries/helpers';
+} from 'src/queries';
+import { usePausedPollingEffect } from 'src/common/context';
+import { ResolvedQueries } from 'src/common/components/ResolvedQuery';
+import { isSameResource } from 'src/queries/helpers';
 import { PlanDetails } from './PlanDetails';
-import { SOURCE_PROVIDER_TYPES } from '@kubev2v/legacy/common/constants';
+import { SOURCE_PROVIDER_TYPES } from 'src/common/constants';
 
 interface IPlanDetailsModalProps {
   plan: IPlan;

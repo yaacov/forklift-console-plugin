@@ -5,8 +5,7 @@
     "paths": {
       "@kubev2v/legacy/*": ["../legacy/src/*"],
       "@kubev2v/common/*": ["../common/src/*"],
-      "@kubev2v/webpack/*": ["../webpack/src/*"],
-      "@kubev2v/forklift-console-plugin/*": ["src/*"]
+      "@kubev2v/webpack/*": ["../webpack/src/*"]
     }
   }
 }

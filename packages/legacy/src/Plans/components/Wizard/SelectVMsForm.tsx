@@ -37,10 +37,10 @@ import {
   SourceInventoryProvider,
   InventoryTree,
   InventoryTreeType,
-} from '@kubev2v/legacy/queries/types';
+} from 'src/queries/types';
 import { useSelectionState } from '@migtools/lib-ui';
 
-import { useSortState, usePaginationState, useFilterState } from '@kubev2v/legacy/common/hooks';
+import { useSortState, usePaginationState, useFilterState } from 'src/common/hooks';
 import { PlanWizardFormState } from './PlanWizard';
 import {
   getAvailableVMs,
@@ -49,23 +49,23 @@ import {
   getVMTreePathInfo,
   vmMatchesConcernFilter,
 } from './helpers';
-import { IndexedTree, useSourceVMsQuery } from '@kubev2v/legacy/queries';
-import { TableEmptyState } from '@kubev2v/legacy/common/components/TableEmptyState';
+import { IndexedTree, useSourceVMsQuery } from 'src/queries';
+import { TableEmptyState } from 'src/common/components/TableEmptyState';
 import {
   FilterToolbar,
   FilterType,
   FilterCategory,
-} from '@kubev2v/legacy/common/components/FilterToolbar';
-import { ResolvedQueries } from '@kubev2v/legacy/common/components/ResolvedQuery';
+} from 'src/common/components/FilterToolbar';
+import { ResolvedQueries } from 'src/common/components/ResolvedQuery';
 import { VMConcernsIcon } from './VMConcernsIcon';
 import { VMConcernsDescription } from './VMConcernsDescription';
-import { LONG_LOADING_MESSAGE } from '@kubev2v/legacy/queries/constants';
-import { PROVIDER_TYPE_NAMES } from '@kubev2v/legacy/common/constants';
+import { LONG_LOADING_MESSAGE } from 'src/queries/constants';
+import { PROVIDER_TYPE_NAMES } from 'src/common/constants';
 import { UseQueryResult } from 'react-query';
 import {
   getVMPowerState,
   VMNameWithPowerState,
-} from '@kubev2v/legacy/common/components/VMNameWithPowerState';
+} from 'src/common/components/VMNameWithPowerState';
 
 interface ISelectVMsFormProps {
   form: PlanWizardFormState['selectVMs'];

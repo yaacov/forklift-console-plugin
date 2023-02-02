@@ -9,10 +9,6 @@
     "declaration": false,
 
     "baseUrl": "./",
-    "outDir": "dist",
-
-    "paths": {
-      "@kubev2v/forklift-console-plugin/*": ["src/*"]
-    }
+    "outDir": "dist"
   },
 }

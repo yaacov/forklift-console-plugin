@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { UseMutationResult } from 'react-query';
-import { UnknownResult } from '@kubev2v/legacy/common/types';
+import { UnknownResult } from 'src/common/types';
 import {
   Spinner,
   Alert,
@@ -10,8 +10,8 @@ import {
   AlertGroup,
 } from '@patternfly/react-core';
 import spacing from '@patternfly/react-styles/css/utilities/Spacing/spacing';
-import { KubeClientError } from '@kubev2v/legacy/client/types';
-import { getAggregateQueryStatus } from '@kubev2v/legacy/queries/helpers';
+import { KubeClientError } from 'src/client/types';
+import { getAggregateQueryStatus } from 'src/queries/helpers';
 import { LoadingEmptyState } from '../LoadingEmptyState';
 
 export enum QuerySpinnerMode {

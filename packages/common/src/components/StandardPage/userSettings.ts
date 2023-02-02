@@ -1,9 +1,9 @@
-import { UserSettings } from '@kubev2v/common/components/StandardPage';
+import { UserSettings } from 'src/components/StandardPage';
 import {
   loadFromLocalStorage,
   removeFromLocalStorage,
   saveToLocalStorage,
-} from '@kubev2v/common/utils/localStorage';
+} from 'src/utils/localStorage';
 
 const parseOrClean = (key) => {
   try {

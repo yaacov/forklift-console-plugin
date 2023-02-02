@@ -10,15 +10,15 @@ import {
   PrimaryFilters,
   toFieldFilter,
   useUrlFilters,
-} from '@kubev2v/common/components/Filter';
+} from 'src/components/Filter';
 import {
   ManageColumnsToolbar,
   RowProps,
   TableView,
   useSort,
-} from '@kubev2v/common/components/TableView';
-import { Field } from '@kubev2v/common/components/types';
-import { useTranslation } from '@kubev2v/common/utils/i18n';
+} from 'src/components/TableView';
+import { Field } from 'src/components/types';
+import { useTranslation } from 'src/utils/i18n';
 import {
   Level,
   LevelItem,

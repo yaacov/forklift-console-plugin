@@ -14,14 +14,14 @@ import {
 } from '@patternfly/react-table';
 import tableStyles from '@patternfly/react-styles/css/components/Table/table';
 import { useSelectionState } from '@migtools/lib-ui';
-import { useSortState, usePaginationState } from '@kubev2v/legacy/common/hooks';
-import { IMetaObjectMeta, Mapping, MappingType } from '@kubev2v/legacy/queries/types';
+import { useSortState, usePaginationState } from 'src/common/hooks';
+import { IMetaObjectMeta, Mapping, MappingType } from 'src/queries/types';
 import { MappingsActionsDropdown } from './MappingsActionsDropdown';
 import { MappingDetailView } from './MappingDetailView';
 import { MappingStatus } from './MappingStatus';
-import { isSameResource } from '@kubev2v/legacy/queries/helpers';
-import { useClusterProvidersQuery } from '@kubev2v/legacy/queries';
-import { ENV } from '@kubev2v/legacy/common/constants';
+import { isSameResource } from 'src/queries/helpers';
+import { useClusterProvidersQuery } from 'src/queries';
+import { ENV } from 'src/common/constants';
 
 interface IMappingsTableProps {
   mappings: Mapping[];

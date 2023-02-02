@@ -6,10 +6,6 @@
 
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "dist",
-
-    "paths": {
-      "@kubev2v/webpack/*": ["./src/*"],
-    }
+    "outDir": "dist"
   }
 }

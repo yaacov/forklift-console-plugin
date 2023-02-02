@@ -2,13 +2,13 @@ import * as React from 'react';
 import { TextContent, Text, Form } from '@patternfly/react-core';
 
 import { PlanWizardFormState, PlanWizardMode } from './PlanWizard';
-import { IPlan, SourceVM } from '@kubev2v/legacy/queries/types';
-import { QuerySpinnerMode, ResolvedQueries } from '@kubev2v/legacy/common/components/ResolvedQuery';
+import { IPlan, SourceVM } from 'src/queries/types';
+import { QuerySpinnerMode, ResolvedQueries } from 'src/common/components/ResolvedQuery';
 import { generateMappings, generatePlan } from './helpers';
-import { usePausedPollingEffect } from '@kubev2v/legacy/common/context';
-import { useNamespacesQuery } from '@kubev2v/legacy/queries';
+import { usePausedPollingEffect } from 'src/common/context';
+import { useNamespacesQuery } from 'src/queries';
 import { PlanDetails } from '../PlanDetails';
-import { UnknownResult } from '@kubev2v/legacy/common/types';
+import { UnknownResult } from 'src/common/types';
 
 interface IReviewProps {
   forms: PlanWizardFormState;

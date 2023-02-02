@@ -1,4 +1,4 @@
-import { NAME, NAMESPACE } from '@kubev2v/common/utils/constants';
+import { NAME, NAMESPACE } from 'src/utils/constants';
 import { SortByDirection } from '@patternfly/react-table';
 
 import { buildSort, compareWith, universalComparator } from '../sort';

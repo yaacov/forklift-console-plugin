@@ -15,21 +15,21 @@ import {
 import spacing from '@patternfly/react-styles/css/utilities/Spacing/spacing';
 import { getFormGroupProps, ValidatedTextInput } from '@migtools/lib-ui';
 
-import { POD_NETWORK } from '@kubev2v/legacy/queries/types';
+import { POD_NETWORK } from 'src/queries/types';
 import {
   useClusterProvidersQuery,
   useInventoryProvidersQuery,
   useOpenShiftNetworksQuery,
   useNamespacesQuery,
-} from '@kubev2v/legacy/queries';
+} from 'src/queries';
 import { PlanWizardFormState, PlanWizardMode } from './PlanWizard';
-import { QuerySpinnerMode, ResolvedQueries } from '@kubev2v/legacy/common/components/ResolvedQuery';
-import { ProviderSelect } from '@kubev2v/legacy/common/components/ProviderSelect';
-import { SelectOpenShiftNetworkModal } from '@kubev2v/legacy/common/components/SelectOpenShiftNetworkModal';
+import { QuerySpinnerMode, ResolvedQueries } from 'src/common/components/ResolvedQuery';
+import { ProviderSelect } from 'src/common/components/ProviderSelect';
+import { SelectOpenShiftNetworkModal } from 'src/common/components/SelectOpenShiftNetworkModal';
 import HelpIcon from '@patternfly/react-icons/dist/esm/icons/help-icon';
-import { usePausedPollingEffect } from '@kubev2v/legacy/common/context';
-import { isSameResource } from '@kubev2v/legacy/queries/helpers';
-import { PROVIDER_TYPE_NAMES } from '@kubev2v/legacy/common/constants';
+import { usePausedPollingEffect } from 'src/common/context';
+import { isSameResource } from 'src/queries/helpers';
+import { PROVIDER_TYPE_NAMES } from 'src/common/constants';
 
 interface IGeneralFormProps {
   form: PlanWizardFormState['general'];

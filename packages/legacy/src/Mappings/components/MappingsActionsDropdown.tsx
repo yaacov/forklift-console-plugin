@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { Dropdown, KebabToggle, DropdownItem, DropdownPosition } from '@patternfly/react-core';
-import { MappingType, Mapping, IMetaObjectMeta } from '@kubev2v/legacy/queries/types';
+import { MappingType, Mapping, IMetaObjectMeta } from 'src/queries/types';
 import {
   useClusterProvidersQuery,
   useDeleteMappingMutation,
   useResourceQueriesForMapping,
-} from '@kubev2v/legacy/queries';
-import { ConfirmModal } from '@kubev2v/legacy/common/components/ConfirmModal';
-import { areAssociatedProvidersReady } from '@kubev2v/legacy/queries/helpers';
-import { ConditionalTooltip } from '@kubev2v/legacy/common/components/ConditionalTooltip';
+} from 'src/queries';
+import { ConfirmModal } from 'src/common/components/ConfirmModal';
+import { areAssociatedProvidersReady } from 'src/queries/helpers';
+import { ConditionalTooltip } from 'src/common/components/ConditionalTooltip';
 import { isMappingValid } from './helpers';
-import { ENV } from '@kubev2v/legacy/common/constants';
+import { ENV } from 'src/common/constants';
 
 interface IMappingsActionsDropdownProps {
   mappingType: MappingType;

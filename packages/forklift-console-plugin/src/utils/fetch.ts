@@ -4,7 +4,7 @@ import {
   MigrationResource,
   PlanResource,
   ProviderResource,
-} from '@kubev2v/forklift-console-plugin/utils/types';
+} from 'src/utils/types';
 import { MOCK_MIGRATIONS } from '@kubev2v/legacy/queries/mocks/migrations.mock';
 import { MOCK_PLANS } from '@kubev2v/legacy/queries/mocks/plans.mock';
 import { MOCK_CLUSTER_PROVIDERS } from '@kubev2v/legacy/queries/mocks/providers.mock';

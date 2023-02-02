@@ -11,9 +11,9 @@ import {
 } from '@patternfly/react-table';
 
 import { Step } from './Step';
-import { IVMStatus, IStep } from '@kubev2v/legacy/queries/types';
-import { TickingElapsedTime } from '@kubev2v/legacy/common/components/TickingElapsedTime';
-import { findCurrentStep, getStepType, isStepOnError } from '@kubev2v/legacy/common/helpers';
+import { IVMStatus, IStep } from 'src/queries/types';
+import { TickingElapsedTime } from 'src/common/components/TickingElapsedTime';
+import { findCurrentStep, getStepType, isStepOnError } from 'src/common/helpers';
 
 interface IVMStatusPipelineTableProps {
   status: IVMStatus;

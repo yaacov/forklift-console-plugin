@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { usePollingContext } from '@kubev2v/legacy/common/context';
+import { usePollingContext } from 'src/common/context';
 import { UseQueryResult } from 'react-query';
 import { useMockableQuery, sortByName, getInventoryApiUrl } from './helpers';
 import { MOCK_RHV_VMS, MOCK_VMWARE_VMS } from './mocks/vms.mock';

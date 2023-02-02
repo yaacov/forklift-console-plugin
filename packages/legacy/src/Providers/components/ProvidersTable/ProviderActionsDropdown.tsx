@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { Dropdown, KebabToggle, DropdownItem, DropdownPosition } from '@patternfly/react-core';
-import { useDeleteProviderMutation } from '@kubev2v/legacy/queries';
-import { ICorrelatedProvider, InventoryProvider } from '@kubev2v/legacy/queries/types';
-import { PATH_PREFIX, ProviderType, PROVIDER_TYPE_NAMES } from '@kubev2v/legacy/common/constants';
-import { ConfirmModal } from '@kubev2v/legacy/common/components/ConfirmModal';
-import { EditProviderContext } from '@kubev2v/legacy/Providers/EditProviderContext';
-import { ConditionalTooltip } from '@kubev2v/legacy/common/components/ConditionalTooltip';
+import { useDeleteProviderMutation } from 'src/queries';
+import { ICorrelatedProvider, InventoryProvider } from 'src/queries/types';
+import { PATH_PREFIX, ProviderType, PROVIDER_TYPE_NAMES } from 'src/common/constants';
+import { ConfirmModal } from 'src/common/components/ConfirmModal';
+import { EditProviderContext } from 'src/Providers/EditProviderContext';
+import { ConditionalTooltip } from 'src/common/components/ConditionalTooltip';
 import { useHistory } from 'react-router-dom';
-import { useClusterProvidersQuery } from '@kubev2v/legacy/queries';
+import { useClusterProvidersQuery } from 'src/queries';
 import { hasRunningMigration } from './helpers';
 
 interface IProviderActionsDropdownProps {

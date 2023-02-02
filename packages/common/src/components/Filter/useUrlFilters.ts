@@ -1,6 +1,6 @@
 import { useMemo, useState } from 'react';
 
-import { useSearchParams } from '@kubev2v/common/hooks/useSearchParams';
+import { useSearchParams } from 'src/hooks/useSearchParams';
 
 import { Field } from '../types';
 

@@ -1,7 +1,7 @@
 import { KubeResource } from '@migtools/lib-ui';
-import { IKubeResponse, IKubeStatus } from '@kubev2v/legacy/client/types';
+import { IKubeResponse, IKubeStatus } from 'src/client/types';
 import { consoleFetch } from '@openshift-console/dynamic-plugin-sdk';
-import { listPath, namedPath } from '@kubev2v/legacy/client/helpers';
+import { listPath, namedPath } from 'src/client/helpers';
 
 /** Simulate an axios fetch call */
 const authorizedK8sRequest = async <T>({

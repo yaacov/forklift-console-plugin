@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { Netmask } from 'netmask';
-import { configMatchesHost, getExistingHostConfigs, useSecretQuery } from '@kubev2v/legacy/queries';
+import { configMatchesHost, getExistingHostConfigs, useSecretQuery } from 'src/queries';
 import {
   IHost,
   IHostConfig,
   IHostNetworkAdapter,
   IVMwareProvider,
-} from '@kubev2v/legacy/queries/types';
+} from 'src/queries/types';
 import { SelectNetworkFormState } from './SelectNetworkModal';
 
 export const findHostConfig = (

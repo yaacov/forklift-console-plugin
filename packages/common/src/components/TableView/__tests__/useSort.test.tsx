@@ -1,4 +1,4 @@
-import { NAME } from '@kubev2v/common/utils/constants';
+import { NAME } from 'src/utils/constants';
 import { cleanup, renderHook } from '@testing-library/react-hooks';
 
 import { useSort } from '../sort';

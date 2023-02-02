@@ -4,7 +4,6 @@ import * as path from 'path';
 
 import CopyPlugin from 'copy-webpack-plugin';
 import TerserPlugin from 'terser-webpack-plugin';
-import { TsconfigPathsPlugin } from 'tsconfig-paths-webpack-plugin';
 import { type Configuration as WebpackConfiguration, EnvironmentPlugin } from 'webpack';
 import { type Configuration as WebpackDevServerConfiguration } from 'webpack-dev-server';
 
@@ -32,7 +31,6 @@ const config: WebpackConfiguration & {
   },
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],
-    plugins: [new TsconfigPathsPlugin()],
   },
   module: {
     rules: [

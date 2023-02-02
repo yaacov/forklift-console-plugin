@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { useHistory } from 'react-router-dom';
 import { Button } from '@patternfly/react-core';
-import { IPlan } from '@kubev2v/legacy/queries/types';
-import { PATH_PREFIX } from '@kubev2v/legacy/common/constants';
+import { IPlan } from 'src/queries/types';
+import { PATH_PREFIX } from 'src/common/constants';
 
 interface IPlanStatusNavLinkProps {
   plan: IPlan;

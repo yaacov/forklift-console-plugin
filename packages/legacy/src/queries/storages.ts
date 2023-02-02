@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { usePollingContext } from '@kubev2v/legacy/common/context';
+import { usePollingContext } from 'src/common/context';
 import { useMockableQuery, sortByName, getInventoryApiUrl } from './helpers';
 import {
   IAnnotatedStorageClass,

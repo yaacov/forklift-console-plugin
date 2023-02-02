@@ -4,17 +4,17 @@ import { Button, TextContent, Text, Grid, GridItem, Bullseye, Flex } from '@patt
 import PlusCircleIcon from '@patternfly/react-icons/dist/esm/icons/plus-circle-icon';
 import TrashIcon from '@patternfly/react-icons/dist/esm/icons/trash-icon';
 import spacing from '@patternfly/react-styles/css/utilities/Spacing/spacing';
-import { MappingType, MappingSource, MappingTarget } from '@kubev2v/legacy/queries/types';
-import { LineArrow } from '@kubev2v/legacy/common/components/LineArrow';
+import { MappingType, MappingSource, MappingTarget } from 'src/queries/types';
+import { LineArrow } from 'src/common/components/LineArrow';
 import { MappingSourceSelect } from './MappingSourceSelect';
 import { MappingTargetSelect } from './MappingTargetSelect';
 import { getMappingSourceTitle, getMappingTargetTitle } from '../helpers';
-import { ConditionalTooltip } from '@kubev2v/legacy/common/components/ConditionalTooltip';
+import { ConditionalTooltip } from 'src/common/components/ConditionalTooltip';
 
 import './MappingBuilder.css';
-import { ProviderType } from '@kubev2v/legacy/common/constants';
-import { getStorageTitle } from '@kubev2v/legacy/common/helpers';
-import { TruncatedText } from '@kubev2v/legacy/common/components/TruncatedText';
+import { ProviderType } from 'src/common/constants';
+import { getStorageTitle } from 'src/common/helpers';
+import { TruncatedText } from 'src/common/components/TruncatedText';
 
 export interface IMappingBuilderItem {
   source: MappingSource | null;
