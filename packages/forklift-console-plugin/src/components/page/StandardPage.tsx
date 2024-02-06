@@ -166,6 +166,16 @@ export interface StandardPageProps<T> {
    * Toolbar items with global actions.
    */
   GlobalActionToolbarItems?: FC<GlobalActionToolbarProps<T>>[];
+
+  /**
+   * onSelect Callback
+   */
+  onSelect?: (selectedIds: string[]) => void;
+
+  /**
+   * Initial selected ids
+   */
+  initialSelectedIds?: string[];
 }
 
 /**
@@ -189,6 +199,7 @@ export function StandardPage<T>({
   HeaderMapper = DefaultHeader<T>,
   GlobalActionToolbarItems = [],
   alerts,
+  onSelect,
 }: StandardPageProps<T>) {
   const {
     t,

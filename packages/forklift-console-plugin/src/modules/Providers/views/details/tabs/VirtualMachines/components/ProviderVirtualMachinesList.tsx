@@ -1,6 +1,9 @@
 import React, { FC, useState } from 'react';
 import { RouteComponentProps } from 'react-router-dom';
-import { GlobalActionWithSelection, withIdBasedSelection } from 'src/components/page/withSelection';
+import {
+  GlobalActionWithSelection,
+  StandardPageWithSelection,
+} from 'src/components/page/withSelection';
 import { ProviderData } from 'src/modules/Providers/utils';
 import { useForkliftTranslation } from 'src/utils/i18n';
 
@@ -28,14 +31,11 @@ export interface ProviderVirtualMachinesListProps extends RouteComponentProps {
   cellMapper: FC<RowProps<VmData>>;
   fieldsMetadataFactory: ResourceFieldFactory;
   pageId: string;
+  onSelect?: (selectedVMs: VmData[]) => void;
+  initialSelectedIds?: string[];
 }
 
-export const toId = (item: VmData) =>
-  item.vm.providerType === 'openshift' ? item.vm.uid : item.vm.id;
-const PageWithSelection = withIdBasedSelection<VmData>({
-  toId,
-  canSelect: (item: VmData) => !!item,
-});
+export const toId = (item: VmData) => item.vm.id;
 
 export const ProviderVirtualMachinesList: FC<ProviderVirtualMachinesListProps> = ({
   title,
@@ -45,6 +45,8 @@ export const ProviderVirtualMachinesList: FC<ProviderVirtualMachinesListProps> =
   cellMapper,
   fieldsMetadataFactory,
   pageId,
+  onSelect,
+  initialSelectedIds,
 }) => {
   const { t } = useForkliftTranslation();
 
@@ -62,8 +64,13 @@ export const ProviderVirtualMachinesList: FC<ProviderVirtualMachinesListProps> =
     ),
   ];
 
+  const onSelectedIds = (selectedIds: string[]) => {
+    const selectedVms = vmData.filter((data) => selectedIds.includes(toId(data)));
+    onSelect(selectedVms);
+  };
+
   return (
-    <PageWithSelection
+    <StandardPageWithSelection
       data-testid="vm-list"
       dataSource={[vmData || [], !loading, null]}
       CellMapper={cellMapper}
@@ -77,6 +84,10 @@ export const ProviderVirtualMachinesList: FC<ProviderVirtualMachinesListProps> =
       }}
       extraSupportedMatchers={[concernsMatcher, featuresMatcher]}
       GlobalActionToolbarItems={actions}
+      toId={toId}
+      canSelect={(item: VmData) => !!item}
+      onSelect={onSelect ? onSelectedIds : undefined}
+      initialSelectedIds={initialSelectedIds}
     />
   );
 };
