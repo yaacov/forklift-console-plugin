@@ -9,13 +9,15 @@ import { DetailsItem } from '../../../../utils';
 import {
   CreatedAtDetailsItem,
   CredentialsDetailsItem,
-  NameAndUiLinkDetailsItem,
+  ExternalManagementLinkDetailsItem,
+  NameDetailsItem,
   NamespaceDetailsItem,
   OwnerDetailsItem,
   TypeDetailsItem,
   URLDetailsItem,
 } from './components';
 import { DetailsSectionProps } from './DetailsSection';
+import { getProviderUIAnnotation } from './utils';
 
 export const OvirtDetailsSection: React.FC<DetailsSectionProps> = ({ data }) => {
   const { t } = useForkliftTranslation();
@@ -29,6 +31,13 @@ export const OvirtDetailsSection: React.FC<DetailsSectionProps> = ({ data }) => 
    * If RHV URL is invalid then an empty string is returned
    */
   const getProviderUiContent = (provider: V1beta1Provider): string => {
+    // Check for custom link
+    const customLink = getProviderUIAnnotation(provider);
+    if (customLink) {
+      return customLink;
+    }
+
+    // Calculate link using API URL
     const uiLinkRegexp = new RegExp('(?<=ovirt-engine)\\/api(\\/)*$', 'g');
     const regexpResult = uiLinkRegexp.exec(provider?.spec?.url);
 
@@ -45,14 +54,14 @@ export const OvirtDetailsSection: React.FC<DetailsSectionProps> = ({ data }) => 
     >
       <TypeDetailsItem resource={provider} />
 
-      <DetailsItem title={''} content={''} />
-
-      <NameAndUiLinkDetailsItem
+      <ExternalManagementLinkDetailsItem
         resource={provider}
         canPatch={permissions.canPatch}
         webUILinkText={t(`Red Hat Virtualization Manager UI`)}
-        webUILinkCalcVal={getProviderUiContent(provider)}
+        webUILink={getProviderUiContent(provider)}
       />
+
+      <NameDetailsItem resource={provider} />
 
       <NamespaceDetailsItem resource={provider} />
 
